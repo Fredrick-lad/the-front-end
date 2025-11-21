@@ -1,0 +1,84 @@
+/* General Setup and Centering */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Important for centering to work */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.center-container {
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Login Card Styling */
+.login-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Allows it to take up available space */
+    max-width: 400px; /* Limits the card width */
+    text-align: center;
+    margin: 0 10px;
+}
+
+.login-card h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Form Group Styling (Label above Input) */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align text within the form group to the left */
+    display: flex; /*Enable flex for vertical stacking*/
+    flex-direction: column; /* Stack children (label, input) vertically */
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+    display: block; /* Ensure label takes up full width */
+    color: #555;
+    font-size: 0.9em;
+}
+
+.form-group input {
+    width: 100%; /* Input takes full width of the card's content area */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding/border in the element's total width/height */
+    outline: none;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0D9488;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0d9489e7;
+}
+
+a{
+    text-decoration: none;
+    color: #0D9488;
+}
+a:hover {
+    cursor: pointer;
+    color: #0d9489d7;
+}

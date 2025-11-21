@@ -1,4 +1,4 @@
-const clicked = document.getElementById('register.form');
+const clicked = document.getElementById('register-form');
 
 clicked.addEventListener('submit', function(event){
     event.preventDefault();
@@ -9,12 +9,19 @@ clicked.addEventListener('submit', function(event){
 function collectdata(){
     const user = document.getElementById('username').value;
     const email = document.getElementById('email').value;
-    const password = document.getElementById('password')
+    const password = document.getElementById('password').value;
+    const confirmpass  = document.getElementById('confirmpass').value;
 
+    if (password == confirmpass){
     const formdata = {
-        Username : user,
-        Email: email,
-        Password : password
+        username : user,
+        email: email,
+        password : password
+    }}
+    else
+    {
+        clicked.reset();
+        alert("make sure the password entred are the same");
     }
     fetch('http://localhost:8080/api/users/register',{
         method : 'POST',
