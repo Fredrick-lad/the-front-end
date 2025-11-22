@@ -7,7 +7,7 @@ click.addEventListener('submit', function(event){
 
 function getlogindetails() {
     const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
+    const email = document.getElementsByName('username').value;
     const password = document.getElementById('password').value;
 
     const logindata = {
@@ -15,17 +15,18 @@ function getlogindetails() {
         email : email,
         password : password
     }
+    console.log(logindata);
     fetch('http://localhost:8080/api/users/login',{
         method : 'POST',
         headers : {'Content-Type': 'application/json'},
         body : JSON.stringify(logindata)
     }).then(response => {
         if (response.ok){
-            window.location.href = "landin-page.html"
+            location.href = "index.html";
             // if the server responds  unpack the recieved json file
             return response.json;
         }else{
-            alert("User not found");
+            throw new Error('Server rejected the request')
         }
     }).then(data =>{
         console.log("Found data", data)

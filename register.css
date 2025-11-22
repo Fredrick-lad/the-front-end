@@ -55,3 +55,8 @@ a:hover{
     cursor: pointer;
     color: #0d9489d7;
 }
+ @media (max-width: 480px) {
+    .registration-card {
+        max-width: 300px;
+    }
+ }
